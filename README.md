@@ -1,6 +1,17 @@
 [jQuery](http://jquery.com/) — New Wave JavaScript
 ==================================================
 
+Security Patches
+--------------------------------------
+This fork of jQuery is intended to supply security patches introduced in later supported versions of jQuery for v1.x. This includes fixes for:
+
+* CVE-2015-9251 
+* CVE-2017-16012
+* CVE-2019-5428
+* CVE-2019-11358
+* CVE-2020-11022
+* CVE-2020-11023
+
 Contribution Guides
 --------------------------------------
 
