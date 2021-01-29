@@ -238,7 +238,7 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 				if ( s.crossDomain && current === "script" ) {
 					continue;
 				}
-				
+
 				// Seek a direct converter
 				conv = converters[ prev + " " + current ] || converters[ "* " + current ];
 

@@ -4,7 +4,6 @@ define( [
 
 // We have to close these tags to support XHTML (#13200)
 var wrapMap = {
-	option: [ 1, "<select multiple='multiple'>", "</select>" ],
 	legend: [ 1, "<fieldset>", "</fieldset>" ],
 	area: [ 1, "<map>", "</map>" ],
 
@@ -20,11 +19,13 @@ var wrapMap = {
 	_default: support.htmlSerialize ? [ 0, "", "" ] : [ 1, "X<div>", "</div>" ]
 };
 
-// Support: IE8-IE9
-wrapMap.optgroup = wrapMap.option;
-
 wrapMap.tbody = wrapMap.tfoot = wrapMap.colgroup = wrapMap.caption = wrapMap.thead;
 wrapMap.th = wrapMap.td;
+
+// Support: IE <=9 only
+if ( !support.option ) {
+	wrapMap.optgroup = wrapMap.option = [ 1, "<select multiple='multiple'>", "</select>" ];
+}
 
 return wrapMap;
 } );
